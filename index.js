@@ -1,10 +1,24 @@
 function deJoaoParaMaria(){
-    maria = maria + joao;
-    joao = 0;
+    oMaria.qtd = oMaria.qtd + oJoao.qtd;
+    oJoao.qtd = 0;
 }
 function deMariaParaJoao(){
-    joao = joao + maria;
-    maria = 0;
+    oJoao = oJoao + oMaria.qtd;
+    oMaria.qtd = 0;
+}
+let oJoao = {
+    tipo: "Maçã",
+    qtd: 1,
+    comeu: function(){
+        oJoao.qtd--;
+    }
+}
+let oMaria = {
+    tipo: "Maçã",
+    qtd: 2,
+    comeu: function() {
+        oMaria.qtd--;
+    }
 }
 let joao = 1;
 let maria = 2;
